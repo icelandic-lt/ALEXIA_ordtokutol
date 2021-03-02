@@ -74,27 +74,30 @@ if they want to use lemmas or word forms and which output format they want.
 The following options are available: 
 
 - LEMMAS: 
--- A list of lemmas and their frequencies in the IGC that do not appear 
+- A list of lemmas and their frequencies in the IGC that do not appear 
 in the DIM nor the pre-defined filters. The list is ordered by frequency
 in descending order. Also included is information on the frequency of 
 singular versus plural nouns. This can be useful for detecting lemmatization
 errors (such as when the lemma is singular but only ever appears in the plural
 form in actuality) or to determine if a word only exists in either form. 
--- A list of lemmas and their frequencies in the IGC that do not appear in 
+
+- A list of lemmas and their frequencies in the IGC that do not appear in 
 the DIM nor the pre-defined filters, ordered by descending frequency. Also
 included are all word forms that appear with the lemma in the IGC. This can
 be useful for determining if a word only appears in certain grammatical context 
 (e.g. a fixed expression).  
--- A list of lemmas and their frequencies in the IGC that do not appear in the
+
+- A list of lemmas and their frequencies in the IGC that do not appear in the
 DIM nor the pre-defined filters, ordered by descending frequency. Also included 
 are the individual frequencies of the lemma within certain types of text, e.g. 
 business news, sports reports, legal reports etc. 
 
 - WORD FORMS:
--- A list of word forms and their frequencies in the IGC that do not appear
+- A list of word forms and their frequencies in the IGC that do not appear
 in the DIM nor the pre-defined filters. The list is ordered by frequency in 
 descending order. 
--- A list of word forms and their frequencies in the IGC that do not appear
+
+- A list of word forms and their frequencies in the IGC that do not appear
 in the DIM nor the pre-defined filters, ordered by descending frequency. Also
 included are all the lemmas that appear with the word form in the IGC. This 
 can be useful for determining whether a word form can belong to more than one
