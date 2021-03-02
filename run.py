@@ -18,7 +18,9 @@ from alexia.collocation_output import user_defined_collocations
 def greeting():
     print("""
         ============================================================
-        Welcome to ALEXIA, the lexicon acquisition tool. 
+        Welcome to ALEXIA, the lexicon acquisition tool. Please
+        make sure you have completed the necessary database creation
+        in the setup.py file included in the package. 
         Do you want to choose your own input or proceed to 
         the demo version?
         ============================================================
