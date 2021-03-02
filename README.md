@@ -73,7 +73,7 @@ the user is asked whether or not to exclude proper names from the results,
 if they want to use lemmas or word forms and which output format they want. 
 The following options are available: 
 
-# LEMMAS: 
+**LEMMAS:** 
 - A list of lemmas and their frequencies in the IGC that do not appear 
 in the DIM nor the pre-defined filters. The list is ordered by frequency
 in descending order. Also included is information on the frequency of 
@@ -92,7 +92,7 @@ DIM nor the pre-defined filters, ordered by descending frequency. Also included
 are the individual frequencies of the lemma within certain types of text, e.g. 
 business news, sports reports, legal reports etc. 
 
-# WORD FORMS:
+**WORD FORMS:**
 - A list of word forms and their frequencies in the IGC that do not appear
 in the DIM nor the pre-defined filters. The list is ordered by frequency in 
 descending order. 
