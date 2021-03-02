@@ -54,8 +54,8 @@ the path to the lexicon SQL-database to be compared to the input corpus.
 The user must then provide the path to a corpus in a plan txt-format.
 Optionally, the user can provide a path to a stopword/filter database
 to exclude certain words from the results. If such a database is not
-needed, the user in stead writes 'None' as an input. The two available
-output formats are:
+needed, the user in stead writes 'None' as an input. **The two available
+output formats are:**
  
 - A list of words and their frequencies in the input corpus that do 
 not appear in the lexicon database (nor the stopwords, if provided). 
