@@ -74,7 +74,7 @@ def enter_file():
 
 def enter_directory():
     directory = input("""
-        Enter the full directory path followed by a forward slash:
+        Please enter the full directory path:
     """)
     if not Path(directory).is_dir():
         print(f"""
@@ -320,117 +320,144 @@ def default():
     
     corpus_part = number_input(4)
     if corpus_part == "1":
-        print(f"""
+        if not Path('corpora/IGC/').is_dir():
+            print(f"""
+        ============================================================
+        The directory corpora/IGC/ does not exist. Please make sure 
+        that the IGC is stored in the same way as the example
+        directories.
+        ============================================================
+        """)     
+        else:
+            print(f"""
         ============================================================
         Entire IGC chosen. 
         ============================================================
-        """)
-        propnames = prop_names()
-        base_form = lemmas_or_wordforms()
-        output = default_output(base_form)
-        
-        if base_form == '1': # Lemmas
-            if propnames == '1': # excluded
-                if output == '1': # plain freq list
-                    lemma_output("corpora/IGC/", prop_names=False) 
-                elif output == '2': # lemma freqs + all word forms
-                    lemmabase_wordforms("corpora/IGC/", prop_names=False) 
-                elif output == '3': # lemma freqs + text types
-                    texttype_freqs("corpora/IGC/", prop_names=False) 
+            """)
+            propnames = prop_names()
+            base_form = lemmas_or_wordforms()
+            output = default_output(base_form)
 
-            elif propnames == '2': # included
-                if output == '1':
-                    lemma_output("corpora/IGC/", prop_names=True)
-                elif output == '2': 
-                    lemmabase_wordforms("corpora/IGC/", prop_names=True)
-                elif output == '3': 
-                    texttype_freqs("corpora/IGC/", prop_names=True)
+            if base_form == '1': # Lemmas
+                if propnames == '1': # excluded
+                    if output == '1': # plain freq list
+                        lemma_output("corpora/IGC/", prop_names=False) 
+                    elif output == '2': # lemma freqs + all word forms
+                        lemmabase_wordforms("corpora/IGC/", prop_names=False) 
+                    elif output == '3': # lemma freqs + text types
+                        texttype_freqs("corpora/IGC/", prop_names=False) 
 
-        elif base_form == '2': # Word forms
-            if propnames == '1':
-                if output == '1':
-                    wordform_output("corpora/IGC/", prop_names=False)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/", prop_names=False)
-            elif propnames == '2':
-                if output == '1':
-                    wordform_output("corpora/IGC/", prop_names=True)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/", prop_names=True)
+                elif propnames == '2': # included
+                    if output == '1':
+                        lemma_output("corpora/IGC/", prop_names=True)
+                    elif output == '2': 
+                        lemmabase_wordforms("corpora/IGC/", prop_names=True)
+                    elif output == '3': 
+                        texttype_freqs("corpora/IGC/", prop_names=True)
+
+            elif base_form == '2': # Word forms
+                if propnames == '1':
+                    if output == '1':
+                        wordform_output("corpora/IGC/", prop_names=False)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/", prop_names=False)
+                elif propnames == '2':
+                    if output == '1':
+                        wordform_output("corpora/IGC/", prop_names=True)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/", prop_names=True)
     elif corpus_part == "2":
-        print(f"""
+        if not Path('corpora/IGC/CC_BY').is_dir():
+            print(f"""
+        ============================================================
+        The directory corpora/IGC/CC_BY does not exist. Please make 
+        sure that the IGC is stored in the same way as the example
+        directories.        
+        ============================================================
+        """)             
+        else:
+            print(f"""
         ============================================================
         CC_BY chosen. 
         ============================================================
-        """)
-        propnames = prop_names()
-        base_form = lemmas_or_wordforms()
-        output = default_output(base_form)
-        if base_form == '1': # Lemmas        
-            if propnames == '1': 
-                if output == '1': 
-                    lemma_output("corpora/IGC/CC_BY/", prop_names=False)
-                elif output == '2': 
-                    lemmabase_wordforms("corpora/IGC/CC_BY/", prop_names=False)
-                elif output == '3': 
-                    texttype_freqs("corpora/IGC/CC_BY/", prop_names=False)
+            """)
+            propnames = prop_names()
+            base_form = lemmas_or_wordforms()
+            output = default_output(base_form)
+            if base_form == '1': # Lemmas        
+                if propnames == '1': 
+                    if output == '1': 
+                        lemma_output("corpora/IGC/CC_BY/", prop_names=False)
+                    elif output == '2': 
+                        lemmabase_wordforms("corpora/IGC/CC_BY/", prop_names=False)
+                    elif output == '3': 
+                        texttype_freqs("corpora/IGC/CC_BY/", prop_names=False)
 
-            elif propnames == '2': 
-                if output == '1':
-                    lemma_output("corpora/IGC/CC_BY/", prop_names=True)
-                elif output == '2': 
-                    lemmabase_wordforms("corpora/IGC/CC_BY/", prop_names=True)
-                elif output == '3': 
-                    texttype_freqs("corpora/IGC/CC_BY/", prop_names=True)
-        
-        elif base_form == '2': # Word forms
-            if propnames == '1':
-                if output == '1':
-                    wordform_output("corpora/IGC/CC_BY/", prop_names=False)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/CC_BY/", prop_names=False)
-            elif propnames == '2':
-                if output == '1':
-                    wordform_output("corpora/IGC/CC_BY/", prop_names=True)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/CC_BY/", prop_names=True)            
+                elif propnames == '2': 
+                    if output == '1':
+                        lemma_output("corpora/IGC/CC_BY/", prop_names=True)
+                    elif output == '2': 
+                        lemmabase_wordforms("corpora/IGC/CC_BY/", prop_names=True)
+                    elif output == '3': 
+                        texttype_freqs("corpora/IGC/CC_BY/", prop_names=True)
+
+            elif base_form == '2': # Word forms
+                if propnames == '1':
+                    if output == '1':
+                        wordform_output("corpora/IGC/CC_BY/", prop_names=False)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/CC_BY/", prop_names=False)
+                elif propnames == '2':
+                    if output == '1':
+                        wordform_output("corpora/IGC/CC_BY/", prop_names=True)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/CC_BY/", prop_names=True)            
     elif corpus_part == "3":
-        print(f"""
+        if not Path('corpora/IGC/CC_BY').is_dir():
+            print(f"""
+        ============================================================
+        The directory corpora/IGC/TIC does not exist. Please make 
+        sure that the IGC is stored in the same way as the example
+        directories.        
+        ============================================================
+        """)             
+        else:        
+            print(f"""
         ============================================================
         TIC chosen. 
         ============================================================
-        """)
-        propnames = prop_names()
-        base_form = lemmas_or_wordforms()
-        output = default_output(base_form)
-        if base_form == '1': # Lemmas
-            if propnames == '1': 
-                if output == '1': 
-                    lemma_output("corpora/IGC/TIC/", prop_names=False)
-                elif output == '2': 
-                    lemmabase_wordforms("corpora/IGC/TIC/", prop_names=False)
-                elif output == '3': 
-                    texttype_freqs("corpora/IGC/TIC/", prop_names=False)
+            """)
+            propnames = prop_names()
+            base_form = lemmas_or_wordforms()
+            output = default_output(base_form)
+            if base_form == '1': # Lemmas
+                if propnames == '1': 
+                    if output == '1': 
+                        lemma_output("corpora/IGC/TIC/", prop_names=False)
+                    elif output == '2': 
+                        lemmabase_wordforms("corpora/IGC/TIC/", prop_names=False)
+                    elif output == '3': 
+                        texttype_freqs("corpora/IGC/TIC/", prop_names=False)
 
-            elif propnames == '2': 
-                if output == '1':
-                    lemma_output("corpora/IGC/TIC/", prop_names=True)
-                elif output == '2': 
-                    lemmabase_wordforms("corpora/IGC/TIC/", prop_names=True)
-                elif output == '3': 
-                    texttype_freqs("corpora/IGC/TIC/", prop_names=True)
+                elif propnames == '2': 
+                    if output == '1':
+                        lemma_output("corpora/IGC/TIC/", prop_names=True)
+                    elif output == '2': 
+                        lemmabase_wordforms("corpora/IGC/TIC/", prop_names=True)
+                    elif output == '3': 
+                        texttype_freqs("corpora/IGC/TIC/", prop_names=True)
 
-        elif base_form == '2': # Word forms
-            if propnames == '1':
-                if output == '1':
-                    wordform_output("corpora/IGC/TIC/", prop_names=False)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/TIC/", prop_names=False)
-            elif propnames == '2':
-                if output == '1':
-                    wordform_output("corpora/IGC/TIC/", prop_names=True)
-                elif output == '2':
-                    wordformbase_lemmas("corpora/IGC/TIC/", prop_names=True)
+            elif base_form == '2': # Word forms
+                if propnames == '1':
+                    if output == '1':
+                        wordform_output("corpora/IGC/TIC/", prop_names=False)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/TIC/", prop_names=False)
+                elif propnames == '2':
+                    if output == '1':
+                        wordform_output("corpora/IGC/TIC/", prop_names=True)
+                    elif output == '2':
+                        wordformbase_lemmas("corpora/IGC/TIC/", prop_names=True)
 
     elif corpus_part == "4":
         print(f"""
@@ -440,12 +467,11 @@ def default():
 
         Example: corpora/IGC/CC_BY/subdirectory
         ============================================================
-        """)
+            """)
         subdir = enter_directory()
         propnames = prop_names()
         base_form = lemmas_or_wordforms()
         output = default_output(base_form)
-
         if base_form == '1': # Lemmas
             if propnames == '1': 
                 if output == '1': 
@@ -454,7 +480,6 @@ def default():
                     lemmabase_wordforms(subdir, prop_names=False)
                 elif output == '3': 
                     texttype_freqs(subdir, prop_names=False)
-
             elif propnames == '2': 
                 if output == '1':
                     lemma_output(subdir, prop_names=True)
@@ -462,7 +487,6 @@ def default():
                     lemmabase_wordforms(subdir, prop_names=True)
                 elif output == '3': 
                     texttype_freqs(subdir, prop_names=True)
-
         elif base_form == '2': # Word forms
             if propnames == '1':
                 if output == '1':
