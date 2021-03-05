@@ -15,7 +15,7 @@ def texttype_freqs(folder, prop_names):
     and to fit another corpus.  
     """
     dim = SQLDatabase(db_name='databases/dim_lemmas_word_forms.db')
-    filters = SQLDatabase(db_name='databases/filters.db') # Predefined stop-word list based on the IGC
+    filters = SQLDatabase(db_name='databases/IGC_filters.db') # Predefined stop-word list based on the IGC
 
     print("""
     ============================================================

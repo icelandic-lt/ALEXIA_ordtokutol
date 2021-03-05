@@ -12,29 +12,31 @@ In order to successfully run ALEXIA, the following steps are needed:
 
 **(1) Run the file setup.py through the command line**
 This script provides the user with a setup of the necessary
-databases for ALEXIA. The script takes two command line arguments:
+databases for ALEXIA.
 
---input (or -i) is a filename to be used to create a lexicon database
-defined by the user. This argument is required, however, if the user
-only wants to install the default options, the argument written should
-be --input default. **Note that the file should be a txt-file stored 
-in the top directory and should contain a header 'word' (see the example
-file lexicon.txt), followed by a list of words, one word per line.**  
+The user is greeted with a welcome message and asked whether to create
+the default databases for the demo version of the program or if they 
+want to provide their own lexicon files. 
 
--- stopwords (or -sw) is a filename to be used to create a user-defined 
-filter database, that is to say, a list of words that should be excluded
-from the output file. This argument is optional. **This file should also
-be a txt-file stored in the top directory, containing the header 'filter',
-followed by a list of words, one word per line.**
+If the user-defined set-up is selected, the user must provide a file path
+to be used to create a lexicon database to be compare to an input corpus. 
+**Note that the file should be a txt-file containing a header 'word' 
+(see the example file lexicon.txt), followed by a list of words, one 
+word per line.**  
 
-If the default version is chosen, the user does not need to provide 
+Optionally, the user can provide a filename to be used to create a filter 
+database, that is to say, a list of words that should be excluded
+from the output file. **This file should also be a txt-file containing 
+the header 'filter', followed by a list of words, one word per line.**
+
+If the default set-up is chosen, the user does not need to provide 
 any further information. The file necessary for the Database of 
 Icelandic Morphology is automatically downloaded and then an 
 SQL-database is created. In the same step, an SQL-database is 
 created from a list of pre-defined stop-words/filters collected 
 from the IGC. This list includes common foreign words, typos, 
 misspellings, OCR-errors, lemmatization errors etc. Note that
-this database is created from the all_filters.txt file included
+this database is created from the IGC_filters.txt file included
 in the package. 
 
 **(2) Run the file run.py through the command line**

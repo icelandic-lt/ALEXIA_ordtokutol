@@ -14,10 +14,7 @@ def lemmabase_wordforms(IGC_folder, prop_names):
     fit the user's need.
     """
     dim = SQLDatabase(db_name='databases/dim_lemmas_word_forms.db')
-    filters = SQLDatabase(db_name='databases/filters.db') # Predefined stop-word list based on the IGC
-
-    dim = SQLDatabase(db_name='databases/dim_lemmas_word_forms.db')
-    filters = SQLDatabase(db_name='databases/filters.db') # Predefined stop-word list based on the IGC
+    filters = SQLDatabase(db_name='databases/IGC_filters.db') # Predefined stop-word list based on the IGC
     pos_to_ignore = ['e', 'c', 'v', 'as', 'to', 'tp', 'ta', 'au'] # The POS tags that should not be displayed in the results
     IGC = IGCExtractor(folder=str(IGC_folder))
     freqdic = {}
@@ -129,10 +126,7 @@ def wordformbase_lemmas(IGC_folder, prop_names):
     fit the user's need.
     """
     dim = SQLDatabase(db_name='databases/dim_lemmas_word_forms.db')
-    filters = SQLDatabase(db_name='databases/filters.db') # Predefined stop-word list based on the IGC
-
-    dim = SQLDatabase(db_name='databases/dim_lemmas_word_forms.db')
-    filters = SQLDatabase(db_name='databases/filters.db') # Predefined stop-word list based on the IGC
+    filters = SQLDatabase(db_name='databases/IGC_filters.db') # Predefined stop-word list based on the IGC
     pos_to_ignore = ['e', 'c', 'v', 'as', 'to', 'tp', 'ta', 'au'] # The POS tags that should not be displayed in the results
     IGC = IGCExtractor(folder=str(IGC_folder))
     freqdic = {}
