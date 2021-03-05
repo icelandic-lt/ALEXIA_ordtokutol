@@ -188,7 +188,7 @@ def user_defined():
 
 def number_input(limit):
     number = input("""
-        Enter number:
+    Enter number:
     """)
     try:
         if int(number) > int(limit) or int(number) == 0:
