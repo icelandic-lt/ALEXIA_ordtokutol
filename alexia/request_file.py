@@ -1,7 +1,6 @@
 """
 This script can be used to retrieve the files that are necessary for
-populating two of the three databases that are used by the Lexicon
-Acquisition Tool. The third one is unavailable as of now.
+populating the databases used in the demo version of ALEXIA.
 """
 
 import urllib.request
@@ -17,6 +16,8 @@ def request_file(url, filename, zipped=True):
         # Removes hashfile (if generated)
         if Path(filename[:-4]+'.sha256sum').is_file():
             remove(filename[:-4]+'.sha256sum')
+        elif Path(filename[:-3]+'xsd').is_file():
+            remove(filename[:-3]+'xsd')
         # Removes zipfile
         remove(filename)
     else:

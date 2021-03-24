@@ -3,11 +3,10 @@ import sqlite3
 
 class CorpusToSQL:
     """
-    This class is used to populate the three databases used in this package,
-    bin_lemmas_word_forms.db, bin_ordmyndir.db, islex_lemmas.db. The first one
-    is populated with create_relational_database and the other ones with create_db.
-    Usage examples are commented out at the bottom of this file. CorpusToSQL is
-    mostly used in setup_dbs.py.
+    This class is used to populate the databases used in this package. As the DIM
+    database includes both lemmas and word forms, it is populated with 
+    create_relational_database but most of the other ones are created with create_db.
+    Usage examples are commented out at the bottom of this file.
     """
     def __init__(self, corpus=None, db_name=None, include_index=True):
         self.corpus = corpus

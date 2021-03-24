@@ -12,8 +12,7 @@ class SQLDatabase:
 
 class SQLiteQuery:
     """
-    This class is used to look up various info in the three databases,
-    bin_lemmas_word_forms.db, bin_ordmyndir.db, islex_lemmas.db.
+    This class is used to look up various info in the databases.
     """
     def __init__(self, word=None, lookup_type=None, table_name=None, cursor=None):
         self.word = word
@@ -25,7 +24,7 @@ class SQLiteQuery:
 
     def _all_word_forms(self):
         """
-        This method is intended to be used with bin_lemmas_word_forms.db.
+        This method is intended to be used with dim_lemmas_word_forms.db.
         It returns a list of all word forms of a given lemma (self.word) if
         it exists.
         """
@@ -43,9 +42,9 @@ class SQLiteQuery:
 
     def exists(self):
         """
-        This method is intended to be used with bin_ordmyndir.db and/or
-        islex_lemmas.db. It returns True if a word forms exists in the former
-        or a lemma exists in the latter. Else it returns False.
+        This method is intended to be used with the databases and 
+        returns True if a word form or a lemma exists in the 
+        database. Else it returns False.
         """
         self.cursor.execute(f"""
                         SELECT 1

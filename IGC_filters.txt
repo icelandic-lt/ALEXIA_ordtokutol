@@ -1,4 +1,5 @@
 filter
+facebook-jssdk
 OBÞ
 Bio-Kult
 aðspyrja
