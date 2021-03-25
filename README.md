@@ -1,3 +1,5 @@
+**UPPLÝSINGAR Á ÍSLENSKU ER AÐ FINNA [HÉR](https://github.com/steinunnfridriks/ALEXIA/blob/main/LESTU.md)**
+
 # ALEXIA - A Lexicon Acquisition Tool
 
 ALEXIA is a command-line based corpus tool used for comparing a certain
