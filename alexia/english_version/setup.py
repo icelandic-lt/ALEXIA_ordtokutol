@@ -44,8 +44,8 @@ def english_setup_greeting():
 
     1 DEFAULT SET-UP: This process will create two databases
     automatically for you. Depending on your choice, either 
-    the Database of Icelandic Morphology or A Dictionary of
-    Contemporary Icelandic (DCI) will be created, along with 
+    the Database of Icelandic Morphology (DIM) or A Dictionary 
+    of Contemporary Icelandic (DCI) will be created, along with 
     a filter database based on a stop-word list compiled from 
     the Icelandic Gigaword Corpus. Please make sure that the 
     file IGC_filters.txt is stored at the top directory. 
