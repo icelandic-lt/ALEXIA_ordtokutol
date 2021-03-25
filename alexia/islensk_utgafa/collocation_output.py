@@ -14,7 +14,7 @@ def user_defined_collocations(database,filterbase,corpus):
     """
     db = SQLDatabase(db_name=database)
     txt_files = glob.glob(corpus+'/**/*.txt', recursive=True)
-    if filterbase != 'N':
+    if filterbase not in ['n', 'N']:
         filters = SQLDatabase(db_name=filterbase)
     else:
         pass    # if there is no filterbase, ignore this step
@@ -38,7 +38,7 @@ def user_defined_collocations(database,filterbase,corpus):
                     continue
                 if (not all(i.isalpha() or i == '-' for i in w)): # if a word contains anything but an alphabetic letter or hyphen, ignore it
                     continue
-                if filterbase != 'N': # if a stopword database has been defined, filter the results
+                if filterbase not in ['n', 'N']: # if a stopword database has been defined, filter the results
                     filter_query = SQLiteQuery(w,'filter','FILTER_WORD_FORMS', cursor=filters.cursor) 
                     if filter_query.exists:
                         continue

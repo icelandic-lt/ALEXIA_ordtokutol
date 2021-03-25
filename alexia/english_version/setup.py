@@ -134,7 +134,7 @@ def enter_file():
     filename = input("""
     Enter the file path:
     """)
-    if filename == 'N':
+    if filename in ['N', 'n']:
         print(f"""
     ============================================================
     No file chosen.
@@ -249,6 +249,18 @@ def default():
                 print("""
     Creating DCI database
                 """)
+            else:
+                print(f"""
+    Creating the file <{dci}> needed for the DCI database.
+                """)
+                get_text_output('eng')
+                print("""
+    Preparing DCI lemmas
+                """)
+                prepare_data(dci)
+                print("""
+    Creating DCI database
+                """)
                 # Creates SQL database dim_lemmas_word_forms.db with header DIM_ELEMENT
                 dci_db = CorpusToSQL(corpus=dci, db_name='databases/dci')
                 dci_db.create_db('DCI_ELEMENT', 'lemma')
@@ -314,7 +326,7 @@ def user_defined():
 
     sw_db = enter_file()
 
-    if sw_db == 'N':
+    if sw_db in ['N', 'n']:
         print("""
     ============================================================
     User set-up completed. The databases can be found in the
@@ -322,7 +334,6 @@ def user_defined():
     run.py from the command line.  
     ============================================================
     """)
-        sys.exit(1)
     else:
         print("""
     Preparing stopword filters
@@ -340,8 +351,7 @@ def user_defined():
     print("""
     ============================================================
     User set-up completed. The databases can be found in the
-    subdirectory databases. Your next step is to run the file
-    run.py from the command line.  
+    subdirectory databases.  
     ============================================================
     """)
 

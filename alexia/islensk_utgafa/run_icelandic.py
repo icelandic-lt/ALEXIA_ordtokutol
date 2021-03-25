@@ -64,7 +64,7 @@ def enter_file():
     filename = input("""
     Skrifaðu slóðina að skjalinu og ýttu á ENTER.  
     """)
-    if filename == 'None':
+    if filename in ['N', 'n']:
         print(f"""
     ============================================================
     Ekkert skjal valið. 
@@ -164,7 +164,7 @@ def user_defined():
     ============================================================
     """)
     filters = enter_file()
-    if filters == 'N':
+    if filters in ['N', 'n']:
         print(f"""
     ============================================================
     Engin stopporð valin.  

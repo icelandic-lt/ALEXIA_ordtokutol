@@ -158,11 +158,11 @@ def user_defined():
     filter database. 
 
     To use a database, please provide the full file path. 
-    To skip this step, please write 'None'
+    To skip this step, please write 'N'
     ============================================================
     """)
     filters = enter_file()
-    if filters == 'None':
+    if filters in ['N', 'n']:
         print(f"""
     ============================================================
     No filters chosen. 

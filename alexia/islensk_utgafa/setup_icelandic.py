@@ -115,7 +115,7 @@ def filter_database():
     Býr til stopporðagagnagrunn.
             """)
             # Creates SQL database filters.db with header FILTER_WORD_FORMS
-            filter_db = CorpusToSQL(corpus=filters, db_name='gagnagrunnar/RMH_filters')
+            filter_db = CorpusToSQL(corpus=filters, db_name='gagnagrunnar/IGC_filters')
             filter_db.create_db('FILTER_WORD_FORMS', 'filter')
         else:
             # Exit if IGC_filters.txt doesn't exist
@@ -132,7 +132,7 @@ def enter_file():
     filename = input("""
     Sláðu inn fulla slóð skjalsins:
     """)
-    if filename == 'N':
+    if filename in ['N', 'n']:
         print(f"""
     ============================================================
     Ekkert skjal valið. 
@@ -247,6 +247,18 @@ def default():
                 print("""
     Býr til NMO gagnagrunn.
                 """)
+            else:
+                print(f"""
+    Býr til skjalið <{nmo}> sem er nauðsynlegt til að klára uppsetningu.
+                """)
+                get_text_output('is')
+                print("""
+    Undirbýr NMO gagnagrunn. 
+                """)
+                prepare_data(nmo)
+                print("""
+    Býr til NMO gagnagrunn.
+                """)                
                 # Creates SQL database dim_lemmas_word_forms.db with header DIM_ELEMENT
                 nmo_db = CorpusToSQL(corpus=nmo, db_name='gagnagrunnar/nmo')
                 nmo_db.create_db('DCI_ELEMENT', 'lemma')
@@ -290,7 +302,7 @@ def user_defined():
     """)
 
     # Creates SQL database (db_name).db, with header LEXICON_WORD
-    lexicon = CorpusToSQL(corpus=db, db_name='gagnagrunnur/'+db_name)
+    lexicon = CorpusToSQL(corpus=db, db_name='gagnagrunnar/'+db_name)
     lexicon.create_db('LEXICON_WORD', 'word')
 
     print("""
@@ -311,7 +323,7 @@ def user_defined():
 
     sw_db = enter_file()
 
-    if sw_db == 'N':
+    if sw_db in ['n', 'N']:
         print("""
     ============================================================
     Notendauppsetningu lokið. Gagnagrunnarnir eru í undirmöppunni
@@ -319,7 +331,6 @@ def user_defined():
     skipanalínu eða halda áfram ferlinu í main.py 
     ============================================================
     """)
-        sys.exit(1)
     else:
         print("""
     Undirbýr stopporðagagnagrunn. 
@@ -337,8 +348,7 @@ def user_defined():
     print("""
     ============================================================
     Notendauppsetningu lokið. Gagnagrunnarnir eru í undirmöppunni
-    gagnagrunnar. Næsta skref er að keyra run_icelandic.py frá
-    skipanalínu eða halda áfram ferlinu í main.py 
+    gagnagrunnar.
     ============================================================
     """)
 
