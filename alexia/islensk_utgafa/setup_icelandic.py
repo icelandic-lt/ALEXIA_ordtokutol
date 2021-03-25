@@ -50,7 +50,7 @@ def icelandic_setup_greeting():
     
     (2) NOTENDAUPPSETNING: Eftir að þessi valmöguleiki er valinn
     þarftu að skrifa slóð txt-skjals sem inniheldur orðalista, 
-    sambærilegan við dæmiskjalið ordasafn.txt sem fylgir með
+    sambærilegan við dæmiskjalið lexicon.txt sem fylgir með
     forritinu. Gangtu úr skugga um að skjalið innihaldi 
     fyrirsögnina 'word' og síðan orðalista þar sem eitt orð
     er í hverri línu (sjá dæmiskjal). Auk þessa er valkvæður

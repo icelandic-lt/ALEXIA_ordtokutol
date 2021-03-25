@@ -53,9 +53,9 @@ program.
 
 **Note that to successfully run the demo-version, the IGC must be stored
 in the same directory as the example files provided. The top directory
-includes a subdirectory corpora, which includes two subdirectories,
-CC_BY and TIC. The user must make sure that the IGC data is stored 
-in the same way.**
+includes a subdirectory corpora. In that directory there is a subdirectory
+IGC which includes two subdirectories, CC_BY and TIC. The user must make 
+sure that the IGC data is stored in the same way.**
 
 If the user-defined version is chosen, the user is asked to provide 
 the path to the lexicon SQL-database to be compared to the input corpus. 
@@ -95,7 +95,9 @@ form in actuality) or to determine if a word only exists in either form.
 the input database nor the pre-defined filters, ordered by descending frequency. 
 Also included are all word forms that appear with the lemma in the IGC. This can
 be useful for determining if a word only appears in certain grammatical context 
-(e.g. a fixed expression).  
+(e.g. a fixed expression) or to reinforce that a lemmatization error has been 
+made (such as if the lemma is singular but the singular does not exist in the
+word forms).  
 
 - A list of lemmas and their frequencies in the IGC that do not appear in the
 DIM nor the pre-defined filters, ordered by descending frequency. Also included 
@@ -107,7 +109,7 @@ input database nor the pre-defined filters, ordered by descending frequency.
 Also includes up to five 5-word collocation examples from the corpus for each 
 candidate, sorted by descending frequency. 
 
-**WORD FORMS:**
+**WORD FORMS (DIM ONLY):**
 - A list of word forms and their frequencies in the IGC that do not appear
 in the DIM nor the pre-defined filters. The list is ordered by frequency in 
 descending order. 
