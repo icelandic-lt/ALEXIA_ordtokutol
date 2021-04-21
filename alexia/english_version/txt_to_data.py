@@ -44,7 +44,7 @@ def user_defined_freqlist(database,filterbase,corpus):
                         query = SQLiteQuery(w,'word','LEXICON_WORD', cursor = db.cursor) # parameters must be updated if the database format is changed                 
                         query_lower = SQLiteQuery(w.lower(),'word','LEXICON_WORD', cursor = db.cursor) 
                         if not query.exists and not query_lower.exists: 
-                            if len(w) > 1:
+                            if len(w) >= 3:
                                 if w in outdict:
                                     outdict[w] += 1
                                 else:
