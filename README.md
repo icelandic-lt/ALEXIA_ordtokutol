@@ -10,7 +10,9 @@ representative of the language or category in question in order to find
 potential gaps in the data. ALEXIA provides an easy way to generate such 
 candidate lists. 
 
-**In order to successfully run ALEXIA, the user must run main.py**
+**In order to successfully run ALEXIA, the user must run main.py. Please note 
+that the dependencies listed in requirements.txt must be installed first, 
+run pip install -r requirements.txt in the terminal**
 This script offers two language options, Icelandic and English. It guides 
 the user through a series of options, including the necessary set-up of 
 SQL-databases. After the setup is completed, the user is offered the option
