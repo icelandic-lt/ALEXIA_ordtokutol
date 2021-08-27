@@ -8,7 +8,9 @@ fyrir tungumálið eða efnisflokkinn sem er verið að skoða hverju sinni. ALE
 býður upp á auðvelda leið til þess að smíða slíka orðalista.
 
 **Til þess að nota orðtökutólið með góðum árangri þarf notandinn að keyra main.py
-í gegnum skipanalínuna**2
+í gegnum skipanalínuna (athugið að fyrst þarf að setja upp þær skráareiningar sem 
+taldar eru upp í requirements.txt, það má gera með því að keyra pip install -r 
+requirements.txt í skipanalínunni):**
 Skriftan býður upp á tvo tungumálavalmöguleika, ensku og íslensku. Hún leiðir
 notandann í gegnum ýmsa valmöguleika, þar á meðal uppsetningu SQL-gagnagrunna.
 Að uppsetningunni lokinni er notandanum boðið að halda áfram í keyrsluhluta
