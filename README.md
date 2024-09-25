@@ -150,7 +150,7 @@ Rut Friðriksdóttir at srf2@hi.is or Atli Jasonarson at atlijas@simnet.is__
 
 ## License
 
-The project is under the Apache License 2.0. See [LICENSE.md](./LICENSE.md).
+The project is under the Apache License 2.0. See [LICENSE](./LICENSE).
 
 ## Acknowledgements
 
