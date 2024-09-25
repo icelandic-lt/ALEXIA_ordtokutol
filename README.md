@@ -1,8 +1,28 @@
-**UPPLÝSINGAR Á ÍSLENSKU ER AÐ FINNA [HÉR](https://github.com/steinunnfridriks/ALEXIA/blob/main/LESTU.md)**
-
 # ALEXIA - A Lexicon Acquisition Tool
 
-ALEXIA is a command-line based corpus tool used for comparing a certain
+![Version](https://img.shields.io/badge/Version-3.0-darkviolet)
+![Python](https://img.shields.io/badge/Python-3.6|3.7|3.8-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
+![CI Status](https://img.shields.io/badge/CI-[unavailable]-red)
+![Docker](https://img.shields.io/badge/Docker-[unavailable]-red)
+
+ALEXIA is a terminal user interface (TUI) tool used for comparing a certain
+vocabulary to that of a larger corpus or corpora.
+
+## Overview
+- **Language:** Python
+- **Language Version/Dialect:**
+  - Python: 3.6+
+- **Category:** [Support Tools](https://github.com/icelandic-lt/icelandic-lt/blob/main/doc/st.md)
+- **Domain:** Generic
+- **Status:** Stable
+- **Origins:** [ALEXIA: Lexicon Acquisition Tool for Icelandic (Orðtökutólið
+  Alexía) 3.0 (21.08)](http://hdl.handle.net/20.500.12537/123) and
+  [Github](https://github.com/steinunnfridriks/ALEXIA).
+
+## Description
+
+ALEXIA is a corpus tool used for comparing a certain
 vocabulary to that of a larger corpus or corpora. In order to maintain 
 lexicons, dictionaries and terminologies, it is necessary to be able 
 to systematically go through large amounts of text considered to be 
@@ -17,12 +37,6 @@ This script offers two language options, Icelandic and English. It guides
 the user through a series of options, including the necessary set-up of 
 SQL-databases. After the setup is completed, the user is offered the option
 of continuing to the actual program. 
-
-**FOLLOWING ARE DESCRIPTIONS OF THE FUNCTIONALITIES OF THE TWO MAIN PROGRAMS INCLUDED**
-
-**setup.py or setup_icelandic.py**
-This script (the two are identical except for the language used) provides the 
-user with a setup of the necessary databases for ALEXIA.
 
 The user is greeted with a welcome message and asked whether to create
 the default databases for the demo version of the program or if they 
@@ -124,8 +138,8 @@ included are all the lemmas that appear with the word form in the IGC. This
 can be useful for determining whether a word form can belong to more than one
 parts of speech and if there are errors in the lemmatization. 
 
-An example of these files can be found in the output directory included in 
-this pacakge. 
+An example of these files can be found in the output directory included in
+this package.
 
 **ALEXIA is an open-source software which can easily be adapted for other
 forms of corpora. The code includes comments meant to facilitate modification. 
@@ -133,3 +147,14 @@ We encourage anyone to make their own versions, suitable to their needs.**
 
 __If any errors or problems occur while using ALEXIA, the user can contact Steinunn
 Rut Friðriksdóttir at srf2@hi.is or Atli Jasonarson at atlijas@simnet.is__
+
+## License
+
+The project is under the Apache License 2.0. See [LICENSE.md](./LICENSE.md).
+
+## Acknowledgements
+
+This project was funded by the Language Technology Programme for Icelandic
+2019-2023. The programme, which is managed and coordinated by
+[Almannarómur](https://almannaromur.is/), was funded by the Icelandic Ministry
+of Education, Science and Culture.
